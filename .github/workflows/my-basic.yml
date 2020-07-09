@@ -5,6 +5,9 @@
 # This is a basic workflow to help you get started with Actions
 
 name: my_git_action1
+env:
+  APPLICATION_NAME: "My Py"
+  DEPLOY_PACKAGE_NAME: "py_deploy_ver-${{ github.sha }}"
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -21,10 +24,17 @@ jobs:
     steps:
       - name: Print Hello Message in my-test
         run : echo "Hello World!"
+      - name: Execute few commands 
+        run: |
+          echo "Hello message 1"
+          echo "Hello message 2"
+          echo "Application name: ${{ env.APPLICATION_NAME }}"
 
   my-deploy:
     needs: [my-test]
     runs-on: ubuntu-latest 
     steps: 
       - name: Print Hello Message in my-deploy
-        run : echo "Hello World!"    
+        run : echo "Hello World!"
+      - name: Printing Deployment package
+        run: echo "Deploy Package name is ${{ env.DEPLOY_PACKAGE_NAME }}    
