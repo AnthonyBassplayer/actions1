@@ -24,11 +24,20 @@ jobs:
     steps:
       - name: Print Hello Message in my-test
         run : echo "Hello World!"
+        
       - name: Execute few commands 
         run: |
           echo "Hello message 1"
           echo "Hello message 2"
           echo "Application name: ${{ env.APPLICATION_NAME }}"
+          
+      - name: List current folder
+        run: ls -la
+        
+        #check всего репозитория и склонировать
+      - name: Git clone my repo
+        uses: actions/checkout@v1
+        
       - name: List current folder
         run: ls -la
 
@@ -38,5 +47,12 @@ jobs:
     steps: 
       - name: Print Hello Message in my-deploy
         run : echo "Hello World!"
+        
       - name: Printing Deployment package
-        run: echo "Deploy Package name is ${{ env.DEPLOY_PACKAGE_NAME }}"    
+        run: echo "Deploy Package name is ${{ env.DEPLOY_PACKAGE_NAME }}"
+      
+      - name: let's test some packages if they are here 1
+        run: aws --version
+     
+      - name: let's test some packages if they are here 2
+        run: zip
