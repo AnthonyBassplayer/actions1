@@ -20,10 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello Message
-        run: echo "Hello World!"
+        run : echo "Hello World!"
 
   my-deploy:
     runs-on: ubuntu-latest 
     steps:
      - name: Print Hello Message
-        run: echo "Hello World!"    
+        run : echo "Hello World!"    
