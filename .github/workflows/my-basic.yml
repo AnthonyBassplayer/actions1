@@ -37,4 +37,4 @@ jobs:
       - name: Print Hello Message in my-deploy
         run : echo "Hello World!"
       - name: Printing Deployment package
-        run: echo "Deploy Package name is ${{ env.DEPLOY_PACKAGE_NAME }}    
+        run: echo "Deploy Package name is ${{ env.DEPLOY_PACKAGE_NAME }}"    
