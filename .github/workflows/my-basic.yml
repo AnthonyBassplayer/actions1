@@ -6,8 +6,7 @@
 
 - name: Checkout
   uses: actions/checkout@v2.3.1
-  with:
-    ref: devtony
+
 
 name: my_git_action1
 env:
