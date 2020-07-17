@@ -4,10 +4,6 @@
 #------------------------
 # This is a basic workflow to help you get started with Actions
 
-- name: Checkout
-  uses: actions/checkout@v2.3.1
-
-
 name: my_git_action1
 env:
   APPLICATION_NAME: "My Py"
